@@ -51,11 +51,12 @@ const Customizer = () => {
   }
 
   const handleSubmit = async (type) => {
-    if (!prompt) return alert("Please enter a prompt")
+    if (!prompt) return alert("Please enter a prompt") //if prompt is equal to null return alert
 
     try {
-      // call our backend to generate an ai image
+      // call backend to generate an ai image
       setGeneratingImg(true);
+      //testing uses 8080 port, and production uses domain name as https://react-threejs-ai-project.onrender.com, backend Provider is 'Render'.
       const response = await fetch('http://localhost:8080/api/v1/dalle', {
         method: 'POST',
         headers: {
