@@ -4,6 +4,7 @@
 
 ## Using Tech
 - React.js
+- Next.js
 - Node.js
 - express.js
 - Three.js
